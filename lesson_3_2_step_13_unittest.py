@@ -1,9 +1,10 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import pytest
+import unittest
 
 
-class TestAbs(pytest.TestCase):
+class TestAbs(unittest.TestCase):
     def test_registration_1(self):
         URL = "http://suninjuly.github.io/registration1.html"
         browser = webdriver.Chrome()
@@ -43,4 +44,4 @@ class TestAbs(pytest.TestCase):
         browser.quit()
 
 if __name__ == "__main__":
-    unittest.main()
+    pytest.main()
