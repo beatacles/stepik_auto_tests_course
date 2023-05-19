@@ -1,8 +1,9 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-import unittest
+import pytest
 
-class TestAbs(unittest.TestCase):
+
+class TestAbs(pytest.TestCase):
     def test_registration_1(self):
         URL = "http://suninjuly.github.io/registration1.html"
         browser = webdriver.Chrome()
