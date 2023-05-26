@@ -23,8 +23,8 @@ def test_authorization(browser, number):
     link = f"https://stepik.org/lesson/{number}/step/1"
     browser.get(link)
     browser.find_element(By.CSS_SELECTOR, "#ember33").click()
-    browser.find_element(By.CSS_SELECTOR, "#id_login_email").send_keys("iam.dkalugin@gmail.com")
-    browser.find_element(By.CSS_SELECTOR, "#id_login_password").send_keys("vHwhn_DCBeC6!3X")
+    browser.find_element(By.CSS_SELECTOR, "#id_login_email").send_keys("SECRET")
+    browser.find_element(By.CSS_SELECTOR, "#id_login_password").send_keys("SECRET")
     browser.find_element(By.CSS_SELECTOR, "[type=submit]").click()
     answer = math.log(int(time.time()))
     time.sleep(2)
