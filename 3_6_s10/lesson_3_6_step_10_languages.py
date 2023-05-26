@@ -8,5 +8,5 @@ link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
 def test_exist_add_to_cart_button(browser):
     browser.get(link)
     time.sleep(30)
-    WebDriverWait(browser, 3).until(
-        EC.visibility_of_element_located((By.CLASS_NAME, "btn-add-to-basket")), "No add to cart button on page")
+    browser.implicitly_wait(5)
+    assert len(browser.find_elements(By.CSS_SELECTOR, ".btn.btn-lg.btn-primary.btn-add-to-basket")) == 1, "'Add to basket' button not found!"
